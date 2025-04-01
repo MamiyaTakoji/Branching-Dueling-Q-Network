@@ -4,14 +4,10 @@ import shutil
 import torch
 torch.manual_seed(42)  # 固定随机种子
 """
-D:
-cd D:\Paper\PaperCode4Paper3\Experiments\BDQ
 tensorboard --logdir ./logs/BDQ
-
 """
 
 # 将文件夹的路径添加到sys.path中
-sys.path.append('D:\Paper\PaperCode4Paper3\Experiments\KAN_DQN')
 import numpy as np
 #%%
 import argparse
