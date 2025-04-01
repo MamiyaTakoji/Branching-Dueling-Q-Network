@@ -1,2 +1,1 @@
-# Branching-Dueling-Q-Network
-A simple implementation of the Branching Dueling Q-Network
+A simple implementation of the [Branching Dueling Q-Network](https://arxiv.org/abs/1711.08946)

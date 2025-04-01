@@ -1,0 +1,68 @@
+#basic
+dl_toolbox: "torch"  # The deep learning toolbox. Choices: "torch", "mindspore", "tensorflow"
+project_name: "XuanCe_Benchmark"
+logger: "tensorboard"  # Choices: "tensorboard", "wandb".
+wandb_user_name: "your_user_name"
+
+render: False
+render_mode: None # Choices: 'human', 'rgb_array'.
+fps: 50
+test_mode: False
+test_steps: 2000
+env_seed: 0
+distributed_training: False
+learner: "DQN_Learner"
+device: "cuda:0"
+
+
+
+
+
+
+buffer_size: 500000
+agent: "DQN"
+env_name: "Classic Control"
+env_id: "CartPole-v1"
+vectorize: "DummyVecEnv"
+policy: "BDQ_Policy"
+representation: "Basic_MLP"
+runner: "DRL"
+
+render: False # Whether to render the environment when testing.
+render_mode: None # Choices: 'human', 'rgb_array'.
+device: "cuda:0"  # Choose an calculating device.
+representation_hidden_size: [512,256]
+q_hidden_size: [256]
+activation: 'relu'
+
+seed: 1
+env_seed: 2910
+parallels: 10
+n_size: 10000
+batch_size: 1024
+learning_rate: 0.0001
+gamma: 0.99
+
+start_greedy: 1
+end_greedy: 0.0001
+decay_step_greedy: 3000000
+sync_frequency: 100
+training_frequency: 50
+running_steps: 3000000  # 200k
+start_training: 1000
+
+use_grad_clip: False  # gradient normalization
+grad_clip_norm: 0.5
+use_actions_mask: False
+use_obsnorm: False
+use_rewnorm: False
+obsnorm_range: 5
+rewnorm_range: 5
+
+test_steps: 10000
+eval_interval: 20000
+test_episode: 1
+log_dir: "./logs/BDQ"
+model_dir: "./models/BDQ"
+actionValueNet_hidden_sizes: [128,128]
+stateValueNet_hidden_sizes: [128,128]
